@@ -18,11 +18,15 @@ El objetivo del agente es mejorar con cada generación, aprendiendo a **esquivar
 
 ## Estructura del proyecto
 Flappy_Bird_IA_MachineLearning
-│
+
 ├── flappy-ai.py # Código principal del juego y la IA
+
 ├── config-feedforward.txt # Configuración de la red neuronal (NEAT)
+
 ├── Dockerfile # (Opcional) Imagen para ejecutar con Docker
+
 ├── docker-compose.yml # (Opcional) Configuración de Docker Compose
+
 └── README.md # Descripción del proyecto
 
 
