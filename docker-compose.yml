@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  flappy-ai:
+    build: .
+    container_name: flappy-ai
+    environment:
+      # Esto permite que el contenedor use tu pantalla local
+      - DISPLAY=${DISPLAY}
+    volumes:
+      # Monta toda la carpeta del proyecto dentro del contenedor
+      - .:/app
+      # Necesario para acceso gráfico X11
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    ports:
+      # Puerto expuesto para futuras interfaces web o sockets
+      - "8080:8080"
+    stdin_open: true  # Permite entrada interactiva
+    tty: true         # Mantiene el terminal abierto
+    command: bash     # Inicia en bash para que puedas usar nano o ejecutar python manualmente
